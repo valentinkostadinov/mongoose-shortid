@@ -1,8 +1,25 @@
 {
   "name": "mongoose-shortid",
   "description": "Short Ids for mongoose",
+  "author": "Jason Choy <jjwchoy@gmail.com>",
   "version": "0.1.0",
+  "contributers": [
+    "name": "Jason Choy",
+    "email": "jjwchoy@gmail.com"
+  ],
+  "main": "./index.js",
+  "directories": {
+    "lib": "."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjwchoy/mongoose-shortid"
+  },
+  "keywords": [
+    "mongoose"
+  ],
   "dependencies": {
     "mongoose": "3.5.x"
-  }
+  },
+  "license": "MIT"
 }
