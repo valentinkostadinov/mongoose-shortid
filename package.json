@@ -1,0 +1,8 @@
+{
+  "name": "mongoose-shortid",
+  "description": "Short Ids for mongoose",
+  "version": "0.1.0",
+  "dependencies": {
+    "mongoose": "3.5.x"
+  }
+}
