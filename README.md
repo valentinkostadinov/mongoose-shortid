@@ -20,6 +20,6 @@ This plugin provides a new Schema Type, ShortId, that can be used in place of Ob
             type: ShortId,
             len: 12,
             retries: 2
-	},
+        },
         name: String
     });
