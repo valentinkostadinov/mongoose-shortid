@@ -3,10 +3,10 @@
   "description": "Short Ids for mongoose",
   "author": "Jason Choy <jjwchoy@gmail.com>",
   "version": "0.1.0",
-  "contributers": [
+  "contributors": [{
     "name": "Jason Choy",
     "email": "jjwchoy@gmail.com"
-  ],
+  }],
   "main": "./index.js",
   "directories": {
     "lib": "."
