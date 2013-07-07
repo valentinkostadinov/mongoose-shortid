@@ -6,7 +6,7 @@ This plugin provides a new Schema Type, ShortId, that can be used in place of Ob
 ### Usage
 
     var mongoose = require('mongoose');
-    var ShortId = require('mongoose-shortid');
+    var ShortId = require('mongoose-shortid')(mongoose);
 
     var personSchema = mongoose.Schema({
         _id: ShortId,
