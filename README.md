@@ -23,8 +23,21 @@ The default options are:
         _id: {
             type: ShortId,
             len: 7,     // Length 7 characters
-            base: 64,   // Base 64 encoded string
+            base: 64,   // Web-safe base 64 encoded string
+            alphabet: undefined // Use default alphabet for base
             retries: 4  // Four retries on collision
         },
         name: String
     });
+
+A custom alphabet can be provided using the `alphabet` option. This takes priority over the `base` argument.
+
+    var personSchema = mongoose.Schema({
+        _id: {
+            type: ShortId,
+            len: 9,
+            alphabet: 'fubar'
+        }
+    });
+
+The generated IDs will be 9 characters long with only the characters `f` `u` `b` `a` and `r`.
