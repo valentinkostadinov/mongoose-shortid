@@ -30,6 +30,8 @@ The default options are:
         name: String
     });
 
+### Custom Alphabets
+
 A custom alphabet can be provided using the `alphabet` option. This takes priority over the `base` argument.
 
     var personSchema = mongoose.Schema({
@@ -41,3 +43,41 @@ A custom alphabet can be provided using the `alphabet` option. This takes priori
     });
 
 The generated IDs will be 9 characters long with only the characters `f` `u` `b` `a` and `r`.
+
+
+### Custom ID Generation
+
+A custom ID generator function can be provided by setting the `generator` option. This function will be called with two arguments: `generatorOptions` and `callback`.
+
+The `generatorOptions` is made up from the `generatorOptions` object in the field options (if set), with `len`, `base` and `alphabet` overriden if set on the field options.
+
+The `callback` function expects to be called with `err` and `id` parameters.
+
+Here's an example.
+
+```
+var mongoose = require('mongoose');
+var ShortId = require('mongoose-shortid');
+
+function customIdGenerator(options, callback) {
+    var desiredLength = options.len || 7;
+    var base = options.base || 64;
+    var alphabet = options.alphabet || alphabetForBase(base);
+    var customOption = options.customOption;
+    
+    // do Id generation
+    var generatedId = ...;
+
+    if (generatedId) {
+        callback(null, generatedId);
+    } else {
+        callback(err);
+    }
+}
+
+var exampleSchema = mongoose.Schema({
+    _id: { type: ShortId, len:4, generatorOptions: { customOption: 'foo' } },
+    name: String
+});
+
+```
