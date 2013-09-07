@@ -76,7 +76,12 @@ function customIdGenerator(options, callback) {
 }
 
 var exampleSchema = mongoose.Schema({
-    _id: { type: ShortId, len:4, generatorOptions: { customOption: 'foo' } },
+    _id: {
+        type: ShortId,
+        len:4,
+        generator: customIdGenerator,
+        generatorOptions: { customOption: 'foo' }
+    },
     name: String
 });
 
