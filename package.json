@@ -2,7 +2,7 @@
   "name": "mongoose-shortid",
   "description": "Short Ids for mongoose",
   "author": "Jason Choy <jjwchoy@gmail.com>",
-  "version": "0.2.1",
+  "version": "0.4.0",
   "contributors": [
     {
       "name": "Jason Choy",
@@ -25,8 +25,10 @@
     "mongoose"
   ],
   "dependencies": {
-    "mongoose": "3.5.x",
     "bignum": "~0.6.1"
+  },
+  "peerDependencies": {
+    "mongoose": ">= 3.5.0 < 4"
   },
   "license": "MIT"
 }
