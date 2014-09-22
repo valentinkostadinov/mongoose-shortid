@@ -11,6 +11,10 @@
     {
       "name": "John Papandriopoulos",
       "email": "jpap@snappylabs.com"
+    },
+    {
+      "name": "Jouke Visser",
+      "email": "jouke@homerez.com"
     }
   ],
   "main": "./index.js",
