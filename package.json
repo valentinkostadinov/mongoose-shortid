@@ -2,7 +2,7 @@
   "name": "mongoose-shortid",
   "description": "Short Ids for mongoose",
   "author": "Jason Choy <jjwchoy@gmail.com>",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "contributors": [
     {
       "name": "Jason Choy",
@@ -11,6 +11,10 @@
     {
       "name": "John Papandriopoulos",
       "email": "jpap@snappylabs.com"
+    },
+    {
+      "name": "Jouke Visser",
+      "email": "jouke@homerez.com"
     }
   ],
   "main": "./index.js",

@@ -1,7 +1,8 @@
 mongoose-shortid
 ================
 
-This plugin provides a new Schema Type, ShortId, that can be used in place of ObjectId. The generated IDs are random url-safe strings of configurable length, represented in a configurable base (10, 16, 32, 36, 62, 64 only).
+This plugin provides a new Schema Type, ShortId, that can be used in place of ObjectId. Typically you will want to use this instead of the default `id` field, but you can also use ShortId for any other field. To make sure however the ShortId is unique, you should add an index on the field.
+The generated IDs are random url-safe strings of configurable length, represented in a configurable base (10, 16, 32, 36, 62, 64 only).
 
 This plugin will automatically retry inserts on a collision.
 
@@ -15,6 +16,15 @@ var personSchema = mongoose.Schema({
     _id: ShortId,
     name: String
 });
+
+// or 
+
+var anotherSchema = mongoose.Schema({
+    alternativeId: { type: ShortId, index: true},
+    name         : String
+});
+
+
 ```
 
 ### Options
